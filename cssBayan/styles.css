@@ -1,0 +1,112 @@
+.bayan__page {
+    background-color: lightgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.bayan__list {
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 40px; */
+    list-style: none;
+    padding-left: 0;
+}
+
+.bayan__label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: blue;
+}
+
+.bayan__list:hover .bayan__label {
+    background-image: url('img/open.png');
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    color: black;
+}
+
+.bayan__item {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    height: 100%;
+    cursor: pointer;
+    border-top: 2px solid darkgrey;
+}
+
+.bayan__item:hover .bayan__img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.bayan__item:hover .bayan__label {
+    background-image: url('img/close.png');
+}
+
+
+.bayan__item:active .bayan__img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.bayan__item:active .bayan__img  {
+    opacity: 0.6;
+    /* color: blue; */
+}
+
+.bayan__item:active .bayan__label {
+    background-image: url('img/close.png');
+    opacity: 0.6;
+    color: blue;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.bayan__img {
+    height: 0;
+}
+
+.bayan__input:checked+.bayan__label+.bayan__img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.bayan__list:hover .bayan__input:checked+.bayan__label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url('img/close.png');
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+}
+
+.bayan__input:checked+.bayan__label {
+    color: black;
+}
+
+.bayan__item:active .bayan__input:checked+.bayan__label {
+    color: blue;
+    opacity: 0.6;
+}
