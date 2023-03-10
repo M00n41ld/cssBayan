@@ -17,40 +17,18 @@
     padding-left: 0;
 }
 
-.bayan__text {
-    position: relative;
-}
-
-.bayan__svg {
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-
-.bayan__svg--close {
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 4px;
-    transform: translateY(-50%);
-}
-
 .bayan__label {
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
     color: blue;
-    display: flex;
-    flex-direction: column;
 }
 
 .bayan__list:hover .bayan__label {
-    /* background-image: url('img/open.svg');
+    background-image: url('img/open.png');
     background-repeat: no-repeat;
     background-position-x: 90%;
-    background-position-y: 50%; */
+    background-position-y: 50%;
     color: black;
 }
 
@@ -70,28 +48,10 @@
     margin-bottom: 10px;
 }
 
-.bayan__text {
-    padding-right: 100px;
-}
-/* .bayan__item:hover .bayan__label {
-    background-color: aqua;
+.bayan__item:hover .bayan__label {
+    background-image: url('img/close.png');
 }
 
-.bayan__item:hover .bayan__label .bayan__text {
-    background-color: pink;
-} */
-
-.bayan__list:hover .bayan__label .bayan__text .bayan__svg {
-    display: block;
-}
-
-.bayan__list:hover .bayan__input:checked + .bayan__label .bayan__text .bayan__svg {
-    display: none;
-}
-
-.bayan__list:hover .bayan__input:checked + .bayan__label .bayan__text .bayan__svg--close {
-    display: block;
-}
 
 .bayan__item:active .bayan__img {
     height: 100%;
@@ -106,7 +66,7 @@
 }
 
 .bayan__item:active .bayan__label {
-    /* background-image: url('img/close.svg'); */
+    background-image: url('img/close.png');
     opacity: 0.6;
     color: blue;
 }
@@ -126,27 +86,21 @@
     height: 0;
 }
 
-.bayan__input:checked+.bayan__label .bayan__img {
+.bayan__input:checked+.bayan__label+.bayan__img {
     height: 100%;
     display: block;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
-.bayan__list:hover .bayan__input:checked .bayan__label {
-     padding-top: 10px;
+.bayan__list:hover .bayan__input:checked+.bayan__label {
+    padding-top: 10px;
     padding-bottom: 10px;
-
-    color: pink;
-    background-image: url('img/close.svg'); 
+    background-image: url('img/close.png');
     background-repeat: no-repeat;
     background-position-x: 90%;
-    background-position-y: 50%; 
+    background-position-y: 50%;
 }
-
-.bayan__list:hover .bayan__input:checked .bayan__label .bayan__text {
-    display: none;
-} 
 
 .bayan__input:checked+.bayan__label {
     color: black;
@@ -155,21 +109,4 @@
 .bayan__item:active .bayan__input:checked+.bayan__label {
     color: blue;
     opacity: 0.6;
-}
-
-.bayan__item:active .bayan__input:checked+.bayan__label .bayan__text .bayan__svg--close{
-    fill: blue
-}
-
-.bayan__item:active .bayan__label .bayan__text .bayan__svg--close{
-    fill: blue
-}
-
-
-.bayan__item:hover .bayan__label .bayan__text .bayan__svg {
-    display: none;
-}
-
-.bayan__item:hover .bayan__label .bayan__text .bayan__svg--close {
-    display: block;
 }
